@@ -1,0 +1,115 @@
+@import 'var';
+@import 'reset';
+body {
+    font-size: $text-size;
+    background: $bg-color;
+}
+.wrapper {
+    padding: $gap;
+    min-height: 100vh;
+    .header {
+        height: $gap;
+        position: fixed;
+        background: $bg-color;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .theme {
+            &:hover {}
+            &:active {}
+            &:focus {}
+        }
+        h1 {}
+    }
+    .menu {
+        width: $gap;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transition: translateY(50%);
+        .btn-burger {
+            &:hover {}
+            &:active {}
+            &:focus {}
+        }
+    }
+    .links {
+        width: $gap;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 5;
+        li {
+            a {
+                &:hover {}
+                &:active {}
+                &:focus {}
+            }
+        }
+    }
+    .hero {
+        width: 100%;
+        background: $primary-color;
+        height: calc(100vh - 160px);
+        margin: 0 0 $gap;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:before {
+            content: "";
+            width: 50%;
+            background: $second-bg-color;
+            height: calc(100vh - 160px);
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 0;
+            transition: opacity 4s, transform 2s;
+        }
+        &-text {
+            position: relative;
+            z-index: 10;
+            .welcome-text {
+                .dot {}
+            }
+            .info {
+                opacity: 0;
+                display: none;
+                span {}
+            }
+        }
+        &:hover {
+            &:before {
+                opacity: 0;
+                transform: translateX(100%);
+                transition: opacity 4s, transform 2s;
+            }
+            .info {
+                display: block;
+                opacity: 1;
+            }
+            .welcome-text {
+                opacity: 0;
+                display: none;
+            }
+        }
+    }
+    .parallax {}
+    .skills {
+        .title {}
+    }
+    .projects {
+        .title {}
+    }
+    .experience {
+        .title {}
+    }
+    .footer {}
+}
