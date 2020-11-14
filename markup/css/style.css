@@ -35,7 +35,7 @@ table {
   border-spacing: 0; }
 
 body {
-  font-size: 32px;
+  font: 32px "Roboto", sans-serif;
   background: #fff; }
 
 .wrapper {
@@ -65,7 +65,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     z-index: 5; }
+    .wrapper .links-item {
+      margin: 0 0 16px; }
+      .wrapper .links-item a svg {
+        fill: #75715e; }
   .wrapper .hero {
     width: 100%;
     background: #e6db74;
@@ -88,6 +93,14 @@ body {
     .wrapper .hero-text {
       position: relative;
       z-index: 10; }
+      .wrapper .hero-text .welcome-text {
+        font-size: 80px;
+        font-weight: 900; }
+        .wrapper .hero-text .welcome-text .dot {
+          display: inline-block;
+          height: 14px;
+          width: 14px;
+          color: #f92672; }
       .wrapper .hero-text .info {
         opacity: 0;
         display: none; }
