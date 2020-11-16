@@ -48,8 +48,16 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-between; }
+    z-index: 10; }
+    .wrapper .header .main-title {
+      position: absolute;
+      top: 43px;
+      left: 80px;
+      font-size: 18px; }
+    .wrapper .header .theme {
+      position: absolute;
+      top: 43px;
+      right: 80px; }
   .wrapper .menu {
     width: 56px;
     position: fixed;
@@ -107,8 +115,6 @@ body {
     .wrapper .open .btn-burger-line:nth-child(3) {
       top: 13px;
       transform: rotate(-135deg); }
-    .wrapper .open .btn-burger-line:hover {
-      translate: none; }
   .wrapper .links {
     width: 80px;
     position: fixed;
@@ -126,7 +132,7 @@ body {
         fill: #75715e; }
   .wrapper .hero {
     width: 100%;
-    background: #e6db74;
+    background: #64c7e6;
     height: calc(100vh - 160px);
     margin: 0 0 80px;
     position: relative;
@@ -145,10 +151,11 @@ body {
       transition: opacity 4s, transform 2s; }
     .wrapper .hero-text {
       position: relative;
-      z-index: 10; }
+      z-index: 9; }
       .wrapper .hero-text .welcome-text {
         font-size: 80px;
-        font-weight: 900; }
+        font-weight: 900;
+        position: relative; }
         .wrapper .hero-text .welcome-text .dot {
           display: inline-block;
           height: 14px;
@@ -157,3 +164,50 @@ body {
       .wrapper .hero-text .info {
         opacity: 0;
         display: none; }
+    .wrapper .hero:hover:before {
+      opacity: 0;
+      transform: translateX(100%);
+      transition: opacity 4s, transform 2s; }
+    .wrapper .hero:hover .info {
+      display: block;
+      opacity: 1; }
+    .wrapper .hero:hover .welcome-text {
+      opacity: 0;
+      display: none; }
+  .wrapper .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 160px); }
+  .wrapper .img-1 {
+    background-image: url(../img/laptop_coffee.png); }
+  .wrapper .skills-block .skills-item {
+    font-size: 32px;
+    margin: 0 0 32px;
+    width: 440px;
+    position: relative; }
+    .wrapper .skills-block .skills-item:last-child {
+      margin-bottom: 0; }
+    .wrapper .skills-block .skills-item:after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background-color: #f92672;
+      border-radius: 50%;
+      position: absolute;
+      right: 0;
+      bottom: 50%;
+      z-index: 5; }
+  .wrapper .box {
+    background-color: #f5f5f5;
+    margin: 80px 0;
+    padding: 80px;
+    color: #272822;
+    position: relative; }
+    .wrapper .box .title {
+      font-size: 80px;
+      font-weight: 900;
+      margin: 0 0 33px; }
+  .wrapper .img-2 {
+    background-image: url(../img/Group.png); }
