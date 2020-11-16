@@ -51,11 +51,64 @@ body {
     display: flex;
     justify-content: space-between; }
   .wrapper .menu {
-    width: 80px;
+    width: 56px;
     position: fixed;
     top: 50%;
-    left: 0;
-    transition: translateY(50%); }
+    left: 54px;
+    z-index: 10; }
+    .wrapper .menu .btn-burger {
+      width: 48px;
+      height: 31px;
+      transform: rotate(0deg);
+      transition: .5s ease-in-out;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      background: none; }
+      .wrapper .menu .btn-burger-line {
+        display: block;
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        background: #75715e;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .4s ease-in-out; }
+        .wrapper .menu .btn-burger-line:nth-child(1) {
+          top: 0px;
+          left: 0; }
+        .wrapper .menu .btn-burger-line:nth-child(2) {
+          top: 13px;
+          left: 8px; }
+        .wrapper .menu .btn-burger-line:nth-child(3) {
+          bottom: 0;
+          left: 0; }
+      .wrapper .menu .btn-burger:not(.open):hover .btn-burger-line:nth-child(1) {
+        transform: rotate(-15deg) scaleX(1.05);
+        top: -15px;
+        left: 5px; }
+      .wrapper .menu .btn-burger:not(.open):hover .btn-burger-line:nth-child(2) {
+        transform: rotate(0deg) scaleX(1.3);
+        left: 20px; }
+      .wrapper .menu .btn-burger:not(.open):hover .btn-burger-line:nth-child(3) {
+        transform: rotate(15deg) scaleX(1.05);
+        bottom: -15px;
+        left: 5px; }
+  .wrapper .open .btn-burger {
+    position: relative;
+    left: -36px; }
+    .wrapper .open .btn-burger-line:nth-child(1) {
+      top: 13px;
+      transform: rotate(135deg); }
+    .wrapper .open .btn-burger-line:nth-child(2) {
+      opacity: 0;
+      left: -60px; }
+    .wrapper .open .btn-burger-line:nth-child(3) {
+      top: 13px;
+      transform: rotate(-135deg); }
+    .wrapper .open .btn-burger-line:hover {
+      translate: none; }
   .wrapper .links {
     width: 80px;
     position: fixed;
@@ -104,13 +157,3 @@ body {
       .wrapper .hero-text .info {
         opacity: 0;
         display: none; }
-    .wrapper .hero:hover:before {
-      opacity: 0;
-      transform: translateX(100%);
-      transition: opacity 4s, transform 2s; }
-    .wrapper .hero:hover .info {
-      display: block;
-      opacity: 1; }
-    .wrapper .hero:hover .welcome-text {
-      opacity: 0;
-      display: none; }

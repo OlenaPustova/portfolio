@@ -17,8 +17,12 @@
             <h1>Olena Pustova</h1>
             <button class="theme"></button>
         </header>
-        <nav class="menu">
-            <button class="btn-burger"></button>
+        <nav id="menu" class="menu">
+            <button id="burger" class="btn-burger">
+                <span class="btn-burger-line"></span>
+                <span class="btn-burger-line"></span>
+                <span class="btn-burger-line"></span>
+            </button>
         </nav>
         <ul class="links">
             <li class="links-item"><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -61,6 +65,14 @@
         </section>
         <footer class="footer"></footer>
     </div>
+    <script type="text/javascript">
+        let menu = document.querySelector("#menu");
+        let burger = document.querySelector("#burger");
+        burger.onclick = function() {
+            menu.classList.toggle('open');
+
+        }
+    </script>
 </body>
 
 </html>
