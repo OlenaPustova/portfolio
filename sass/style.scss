@@ -86,6 +86,7 @@ body {
             top: 43px;
             left: $gap;
             font-size: 18px;
+            color: $header-text-color;
         }
         .theme {
             position: absolute;
@@ -113,6 +114,7 @@ body {
                 position: absolute;
                 height: 5px;
                 width: 100%;
+                border: 1px solid $bg-color;
                 background: $icon-color;
                 opacity: 1;
                 left: 0;
@@ -313,6 +315,7 @@ body {
         .place {
             font-weight: 900;
             margin: 0 0 8px;
+            color: $dark-text-color;
         }
         .role {
             margin: 0 0 46px;
@@ -321,7 +324,6 @@ body {
             font-style: italic;
             font-size: 18px;
             color: $brand-color;
-            text-decoration: underline;
             position: relative;
             .arrow {
                 position: absolute;

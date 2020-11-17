@@ -44,7 +44,7 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  background: #f5f5f5;
+  background: #eefbff;
   z-index: 1001; }
 
 .preloader__row {
@@ -116,7 +116,8 @@ body {
       position: absolute;
       top: 43px;
       left: 80px;
-      font-size: 18px; }
+      font-size: 18px;
+      color: #272822; }
     .wrapper .header .theme {
       position: absolute;
       top: 43px;
@@ -141,6 +142,7 @@ body {
         position: absolute;
         height: 5px;
         width: 100%;
+        border: 1px solid #fff;
         background: #6f8186;
         opacity: 1;
         left: 0;
@@ -205,7 +207,7 @@ body {
     .wrapper .hero:before {
       content: "";
       width: 50%;
-      background: #f5f5f5;
+      background: #eefbff;
       height: calc(100vh - 160px);
       position: absolute;
       right: 0;
@@ -263,7 +265,7 @@ body {
       bottom: 50%;
       z-index: 5; }
   .wrapper .box {
-    background-color: #f5f5f5;
+    background-color: #eefbff;
     margin: 80px 0;
     padding: 80px;
     color: #272822;
@@ -283,14 +285,14 @@ body {
     margin: 0 0 10px; }
   .wrapper .experience-block .place {
     font-weight: 900;
-    margin: 0 0 8px; }
+    margin: 0 0 8px;
+    color: #000; }
   .wrapper .experience-block .role {
     margin: 0 0 46px; }
   .wrapper .experience-block .certificate {
     font-style: italic;
     font-size: 18px;
     color: #f92672;
-    text-decoration: underline;
     position: relative; }
     .wrapper .experience-block .certificate .arrow {
       position: absolute;
