@@ -127,7 +127,7 @@ body {
     position: fixed;
     top: 50%;
     left: 54px;
-    z-index: 10; }
+    z-index: 20; }
     .wrapper .menu .btn-burger {
       width: 48px;
       height: 31px;
@@ -278,23 +278,38 @@ body {
     background-image: url(../img/Group.png); }
   .wrapper .projects {
     display: none; }
-  .wrapper .experience-block .time {
+  .wrapper .text-brand-color {
     font-style: italic;
     font-size: 18px;
-    color: #f92672;
+    color: #f92672; }
+  .wrapper .text-dark-color {
+    font-weight: 900;
+    color: #000; }
+  .wrapper .experience-block .time {
     margin: 0 0 10px; }
   .wrapper .experience-block .place {
-    font-weight: 900;
-    margin: 0 0 8px;
-    color: #000; }
+    margin: 0 0 8px; }
   .wrapper .experience-block .role {
     margin: 0 0 46px; }
   .wrapper .experience-block .certificate {
-    font-style: italic;
-    font-size: 18px;
-    color: #f92672;
     position: relative; }
     .wrapper .experience-block .certificate .arrow {
       position: absolute;
       bottom: 7px;
       right: -22px; }
+  .wrapper .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 80px; }
+    .wrapper .footer .text-brand-color {
+      margin: 0 0 8px; }
+    .wrapper .footer .mail {
+      position: relative;
+      text-decoration: none; }
+      .wrapper .footer .mail .arrow {
+        position: absolute;
+        bottom: 11px;
+        right: -40px; }
+    .wrapper .footer .phone {
+      font-size: 18px; }

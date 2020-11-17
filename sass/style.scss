@@ -99,7 +99,7 @@ body {
         position: fixed;
         top: 50%;
         left: 54px;
-        z-index: 10;
+        z-index: 20;
         .btn-burger {
             width: 48px;
             height: 31px;
@@ -232,7 +232,6 @@ body {
             .info {
                 opacity: 0;
                 display: none;
-                span {}
             }
         }
         &:hover {
@@ -302,28 +301,27 @@ body {
     }
     .projects {
         display: none;
-        .title {}
+    }
+    .text-brand-color {
+        font-style: italic;
+        font-size: 18px;
+        color: $brand-color;
+    }
+    .text-dark-color {
+        font-weight: 900;
+        color: $dark-text-color;
     }
     .experience-block {
-        .title {}
         .time {
-            font-style: italic;
-            font-size: 18px;
-            color: $brand-color;
             margin: 0 0 10px;
         }
         .place {
-            font-weight: 900;
             margin: 0 0 8px;
-            color: $dark-text-color;
         }
         .role {
             margin: 0 0 46px;
         }
         .certificate {
-            font-style: italic;
-            font-size: 18px;
-            color: $brand-color;
             position: relative;
             .arrow {
                 position: absolute;
@@ -332,5 +330,26 @@ body {
             }
         }
     }
-    .footer {}
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 $gap;
+        .text-brand-color {
+            margin: 0 0 8px;
+        }
+        .mail {
+            position: relative;
+            text-decoration: none;
+            .arrow {
+                position: absolute;
+                bottom: 11px;
+                right: -40px;
+            }
+        }
+        .phone {
+            font-size: 18px;
+            // padding: 0 0 103px;
+        }
+    }
 }
