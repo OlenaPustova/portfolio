@@ -18,11 +18,27 @@
             <div class="preloader__item-2"></div>
         </div>
     </div>
-    <div class="wrapper">
+    <div id="wrapper" class="wrapper">
         <header class="header">
             <h1 class="main-title">Olena Pustova</h1>
             <button class="theme"></button>
         </header>
+        <div id="sidenav" class="sidenav">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-item-link" href="#">Skills</a></li>
+                <li class="nav-item"><a class="nav-item-link" href="#">Projects</a></li>
+                <li class="nav-item"><a class="nav-item-link" href="#">Experience</a></li>
+                <li class="nav-item phone">+38 097 818 42 80</li>
+                <li class="nav-item text-brand-color">Whant to collaborate?</li>
+                <li class="nav-item mail"><a class="nav-item-link text-dark-color" href="#">email me<svg class="arrow"
+                            width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.1964 0.0309471C23.4107 -0.0211335 23.6429 -0.000297785 23.8214 0.0830277L30.6786 3.72886C30.7857 3.79137 30.8572 3.87469 30.8572 3.96845C30.8572 4.0622 30.7857 4.15595 30.6786 4.21844L23.8214 7.91635C23.6429 7.99968 23.4107 8.02051 23.1964 7.96843C23 7.91635 22.8572 7.80176 22.8572 7.66636V5.33303L0.571437 5.33303C0.25 5.33303 0 5.18719 0 4.99969L0 2.99969C0 2.81219 0.25 2.66635 0.571437 2.66635L22.8572 2.66635V0.333023C22.8572 0.197598 22.9822 0.0830277 23.1964 0.0309471Z"
+                                fill="#272822" />
+                        </svg>
+                    </a></li>
+            </ul>
+        </div>
         <nav id="menu" class="menu">
             <button id="burger" class="btn-burger">
                 <span class="btn-burger-line"></span>
@@ -40,8 +56,7 @@
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M1.62504 10.0313L14 25.8906L0.43753 16.0469C0.0625383 15.7656 -0.0937313 15.2813 0.0468976 14.8438L1.62501 10.0313H1.62504ZM8.84379 10.0313H19.1563L14.0001 25.8906L8.84379 10.0313ZM5.75004 0.468744L8.84379 10.0312H1.62504L4.7188 0.468744C4.89068 -0.0156231 5.57818 -0.0156231 5.75004 0.468744ZM26.375 10.0313L27.9531 14.8438C28.0938 15.2813 27.9375 15.7656 27.5625 16.0469L14 25.8906L26.375 10.0313H26.375ZM26.375 10.0313H19.1563L22.25 0.468771C22.4219 -0.0155957 23.1094 -0.0155957 23.2813 0.468771L26.375 10.0313Z" />
-                    </svg>
-                </a></li>
+                    </svg></a></li>
             <li class="links-item"><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -50,8 +65,8 @@
         </ul>
         <section class="hero">
             <div class="hero-text">
-                <p><strong class="welcome-text">WELCOME</strong></p>
-                <p><strong class="welcome-text">TEXT<span class="dot">.</span></strong></p>
+                <p><strong class="welcome-text">Hello<span class="dot">.</span></strong></p>
+                <!-- <p><strong class="welcome-text"><span class="dot">.</span></strong></p> -->
                 <div class="info">
                     <p class="text-brand-color">since 2020</p>
                     <p class="text-dark-color">Front-End Developer</p>
@@ -119,15 +134,15 @@
                 document.body.classList.add('loaded');
                 document.body.classList.remove('loaded_hiding');
 
-            }, 2500);
+            }, 500);
         }
     </script>
 
     <script type="text/javascript">
-        let menu = document.querySelector("#menu");
+        let wrapper = document.querySelector("#wrapper");
         let burger = document.querySelector("#burger");
         burger.onclick = function() {
-            menu.classList.toggle('open');
+            wrapper.classList.toggle('active-burger');
 
         }
     </script>

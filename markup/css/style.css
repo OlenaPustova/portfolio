@@ -157,29 +157,31 @@ body {
         .wrapper .menu .btn-burger-line:nth-child(3) {
           bottom: 0;
           left: 0; }
-      .wrapper .menu .btn-burger:not(.open):hover .btn-burger-line:nth-child(1) {
-        transform: rotate(-15deg) scaleX(1.05);
-        top: -15px;
-        left: 5px; }
-      .wrapper .menu .btn-burger:not(.open):hover .btn-burger-line:nth-child(2) {
-        transform: rotate(0deg) scaleX(1.3);
-        left: 20px; }
-      .wrapper .menu .btn-burger:not(.open):hover .btn-burger-line:nth-child(3) {
-        transform: rotate(15deg) scaleX(1.05);
-        bottom: -15px;
-        left: 5px; }
-  .wrapper .open .btn-burger {
-    position: relative;
-    left: -36px; }
-    .wrapper .open .btn-burger-line:nth-child(1) {
-      top: 13px;
-      transform: rotate(135deg); }
-    .wrapper .open .btn-burger-line:nth-child(2) {
-      opacity: 0;
-      left: -60px; }
-    .wrapper .open .btn-burger-line:nth-child(3) {
-      top: 13px;
-      transform: rotate(-135deg); }
+  .wrapper .sidenav {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    z-index: 9;
+    top: 80px;
+    left: 80px;
+    background: #eefbff;
+    width: 0;
+    height: calc(100vh - 160px);
+    padding: 0 80px;
+    transition: 2s;
+    transform: translateX(-100%); }
+    .wrapper .sidenav .nav-item {
+      font-weight: 900;
+      margin: 0 0 32px; }
+      .wrapper .sidenav .nav-item-link {
+        text-decoration: none;
+        color: #272822; }
+      .wrapper .sidenav .nav-item:last-child {
+        margin-bottom: 80px; }
+    .wrapper .sidenav .phone {
+      margin: 0 0 80px; }
+    .wrapper .sidenav .text-brand-color {
+      margin: 0 0 16px; }
   .wrapper .links {
     width: 80px;
     position: fixed;
@@ -203,7 +205,8 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    transition: 1.5s; }
     .wrapper .hero:before {
       content: "";
       width: 50%;
@@ -304,12 +307,52 @@ body {
     padding: 0 0 80px; }
     .wrapper .footer .text-brand-color {
       margin: 0 0 8px; }
-    .wrapper .footer .mail {
-      position: relative;
-      text-decoration: none; }
-      .wrapper .footer .mail .arrow {
-        position: absolute;
-        bottom: 11px;
-        right: -40px; }
-    .wrapper .footer .phone {
-      font-size: 18px; }
+  .wrapper .mail {
+    position: relative;
+    text-decoration: none; }
+    .wrapper .mail .arrow {
+      position: absolute;
+      bottom: 11px;
+      right: -40px; }
+  .wrapper .phone {
+    font-size: 18px; }
+
+.active-burger .sidenav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 1;
+  width: 50%;
+  height: calc(100vh - 160px);
+  transform: translateX(0%);
+  transition: 2s; }
+
+.active-burger .menu .btn-burger {
+  position: relative;
+  left: -36px; }
+  .active-burger .menu .btn-burger-line:nth-child(1) {
+    top: 13px;
+    transform: rotate(135deg); }
+  .active-burger .menu .btn-burger-line:nth-child(2) {
+    opacity: 0;
+    left: -60px; }
+  .active-burger .menu .btn-burger-line:nth-child(3) {
+    top: 13px;
+    transform: rotate(-135deg); }
+
+.active-burger .hero {
+  transform: translateX(100%);
+  width: 50%; }
+  .active-burger .hero-text {
+    transition: transform 1.5s; }
+  .active-burger .hero:before {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 4s, transform 2s;
+    display: none; }
+  .active-burger .hero .info {
+    display: block;
+    opacity: 1; }
+  .active-burger .hero .welcome-text {
+    opacity: 0;
+    display: none; }
