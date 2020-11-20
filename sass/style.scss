@@ -328,11 +328,20 @@ body {
         }
     }
     .img-2 {
-        background-image: url(../img/Group.png);
+        background-image: url(../img/Rectangle-4.png);
+        background-color: $primary-color;
     }
     .projects-block {
         background-color: $dark-bg-color;
         color: $light-text-color;
+        .title {
+            color: $primary-color;
+        }
+        .projects {
+            &-item {
+                color: $light-text-color;
+            }
+        }
         // display: none;
     }
     .text-brand-color {
