@@ -526,7 +526,6 @@ body {
         opacity: 1;
         transform: translateY(0%);
         transition: $transition;
-        .nav {}
     }
     .menu {
         .btn-burger {
@@ -550,7 +549,6 @@ body {
                     transition: .7s ease-in-out;
                 }
             }
-            &:hover {}
         }
     }
     .hero {
