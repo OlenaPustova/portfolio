@@ -227,8 +227,7 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    transition: 1.5s; }
+    align-items: center; }
     .wrapper .hero:before {
       content: "";
       width: 50%;
@@ -241,8 +240,7 @@ body {
       transition: opacity 4s, transform 2s; }
     .wrapper .hero-text {
       position: relative;
-      z-index: 9;
-      transition: 1s 1s; }
+      z-index: 9; }
       .wrapper .hero-text .welcome-text {
         font-size: 80px;
         font-weight: 900;
@@ -311,42 +309,52 @@ body {
     height: calc(100vh - 160px); }
   .wrapper .img-1 {
     background-image: url(../img/laptop_coffee.png); }
-  .wrapper .skills-block .skills-item {
-    font-size: 32px;
-    margin: 0 0 32px;
-    width: 30%;
-    position: relative; }
-    .wrapper .skills-block .skills-item:last-child {
-      margin: 0; }
-    .wrapper .skills-block .skills-item:after {
-      content: "";
-      width: 12px;
-      height: 12px;
-      border-radius: 6px;
-      position: absolute;
-      right: -15%;
-      bottom: 33%;
-      z-index: 5;
-      transform: translateX(0%);
-      background-image: linear-gradient(to right, #f92672 0%, #f92672 100%);
-      transition: 1.5s ease-in 1s; }
-  .wrapper .skills-block:hover .skills-item:after {
-    transform: translateX(100%);
-    transition: 1.1s ease-in-out; }
-  .wrapper .skills-block:hover .html-css:after {
-    width: 100%; }
-  .wrapper .skills-block:hover .layout:after {
-    width: 80%; }
-  .wrapper .skills-block:hover .bootstrap:after {
-    width: 35%; }
-  .wrapper .skills-block:hover .jquery:after {
-    width: 40%; }
-  .wrapper .skills-block:hover .preprocessors:after {
-    width: 75%; }
-  .wrapper .skills-block:hover .gulp:after {
-    width: 80%; }
-  .wrapper .skills-block:hover .git:after {
-    width: 70%; }
+  .wrapper .skills-block-dots {
+    display: flex; }
+    .wrapper .skills-block-dots .skills {
+      width: 30%;
+      min-width: 300px; }
+      .wrapper .skills-block-dots .skills-item {
+        font-size: 32px;
+        margin: 0 0 32px;
+        position: relative; }
+        .wrapper .skills-block-dots .skills-item:last-child {
+          margin: 0; }
+    .wrapper .skills-block-dots .dots-lines {
+      width: 70%; }
+      .wrapper .skills-block-dots .dots-lines .dot-line {
+        margin: 0 0 58px;
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        background: #f92672;
+        position: relative;
+        top: 13px;
+        left: 0%;
+        transition: 1s 1s ease-in-out; }
+        .wrapper .skills-block-dots .dots-lines .dot-line:last-child {
+          margin: 0; }
+  .wrapper .skills-block:hover .skills-block-dots .dots-lines .dot-line:nth-child(1) {
+    width: 90%;
+    transition: 1s ease-in-out; }
+  .wrapper .skills-block:hover .skills-block-dots .dots-lines .dot-line:nth-child(2) {
+    width: 85%;
+    transition: 1s ease-in-out; }
+  .wrapper .skills-block:hover .skills-block-dots .dots-lines .dot-line:nth-child(3) {
+    width: 35%;
+    transition: 1s ease-in-out; }
+  .wrapper .skills-block:hover .skills-block-dots .dots-lines .dot-line:nth-child(4) {
+    width: 40%;
+    transition: 1s ease-in-out; }
+  .wrapper .skills-block:hover .skills-block-dots .dots-lines .dot-line:nth-child(5) {
+    width: 75%;
+    transition: 1s ease-in-out; }
+  .wrapper .skills-block:hover .skills-block-dots .dots-lines .dot-line:nth-child(6) {
+    width: 80%;
+    transition: 1s ease-in-out; }
+  .wrapper .skills-block:hover .skills-block-dots .dots-lines .dot-line:nth-child(7) {
+    width: 50%;
+    transition: 1s ease-in-out; }
   .wrapper .box {
     background-color: #eefbff;
     margin: 80px 0;
