@@ -158,7 +158,8 @@ body {
         // }
     }
     .sidenav {
-        display: none;
+        // display: none;
+        display: flex;
         opacity: 0;
         flex-direction: column;
         justify-content: center;
@@ -169,25 +170,13 @@ body {
         background: $second-bg-color;
         width: calc(50% - 80px);
         height: calc(100vh - 160px);
-        padding: 0 $gap;
-        transform: translateY(-100%);
-        transition: 1.5s ease-in-out;
+        transform: translateX(-100%);
+        // transition: transform 2s, opacity 1s ease-in-out;
+        transition: 1s ease-out;
         .nav {
+            padding: 0 $gap;
             &-item {
                 margin: 0 0 32px;
-                &-link {
-                    font-weight: 900;
-                    text-decoration: none;
-                    color: $main-text-color;
-                    background-image: linear-gradient(to right, $primary-color, transparent 100%);
-                    background-size: 0 100%;
-                    background-repeat: no-repeat;
-                    background-position: 8px 1em;
-                    transition: background .5s;
-                    &:hover {
-                        background-size: 100% 100%;
-                    }
-                }
                 &:nth-child(3) {
                     margin-bottom: $gap;
                 }
@@ -205,6 +194,19 @@ body {
             }
         }
     }
+    .nav-item-link, .footer .mail {
+        font-weight: 900;
+        text-decoration: none;
+        color: $main-text-color;
+        background-image: linear-gradient(to right, $primary-color, transparent 100%);
+        background-size: 0 100%;
+        background-repeat: no-repeat;
+        background-position: 8px 1em;
+        transition: background .5s;
+        &:hover {
+            background-size: 100% 100%;
+        }
+    }
     .links {
         width: $gap;
         position: fixed;
@@ -218,9 +220,22 @@ body {
         z-index: 5;
         &-item {
             margin: 0 0 16px;
-            a {
-                svg {
-                    fill: $icon-color;
+            &-img {
+                fill: $icon-color;
+            }
+            .linkedin {
+                &:hover {
+                    fill: #0073b2;
+                }
+            }
+            .github {
+                &:hover {
+                    fill: #000;
+                }
+            }
+            .fb {
+                &:hover {
+                    fill: #097bea;
                 }
             }
         }
@@ -249,10 +264,35 @@ body {
         &-text {
             position: relative;
             z-index: 9;
+            transition: 1s 1s;
             .welcome-text {
                 font-size: 80px;
                 font-weight: 900;
                 position: relative;
+                .letter:nth-child(1) {
+                    // transform: translateX(100%);
+                    transition: 1s 1s;
+                }
+                .letter:nth-child(2) {
+                    // transform: translateY(100%);
+                    transition: 1s 1.1s;
+                }
+                .letter:nth-child(3) {
+                    // transform: translateY(100%);
+                    transition: 1s 1.2s;
+                }
+                .letter:nth-child(4) {
+                    // transform: translateY(100%);
+                    transition: 1s 1.3s;
+                }
+                .letter:nth-child(5) {
+                    // transform: translateY(100%);
+                    transition: 1s 1.4s;
+                }
+                .letter:nth-child(6) {
+                    // transform: translateY(-100%);
+                    transition: 1s 1.5s;
+                }
                 .dot {
                     display: inline-block;
                     height: 14px;
@@ -263,6 +303,8 @@ body {
             .info {
                 opacity: 0;
                 display: none;
+                // transform: translateX(-1000%);
+                transition: 2s ease-in-out;
             }
         }
         &:hover {
@@ -272,12 +314,46 @@ body {
                 transition: opacity 4s, transform 2s;
             }
             .info {
+                // transform: translateX(0%);
                 display: block;
                 opacity: 1;
+                transition: opacity 2s ease-in-out;
             }
             .welcome-text {
                 opacity: 0;
+                transform: translateX(100%);
+                transition: transform 1s;
                 display: none;
+                .letter:nth-child(1) {
+                    transform: translateX(100%);
+                    transition: 1s 1s;
+                }
+                .letter:nth-child(2) {
+                    transform: translateY(-100%);
+                    transition: 1s 1.1s;
+                }
+                .letter:nth-child(3) {
+                    transform: translateY(-100%);
+                    transition: 1s 1.2s;
+                }
+                .letter:nth-child(4) {
+                    transform: translateY(-100%);
+                    transition: 1s 1.3s;
+                }
+                .letter:nth-child(5) {
+                    transform: translateY(-100%);
+                    transition: 1s 1.4s;
+                }
+                .letter:nth-child(6) {
+                    // transform: translateY(-100%);
+                    transition: 1s 1.5s;
+                }
+                .dot {
+                    display: inline-block;
+                    height: 14px;
+                    width: 14px;
+                    color: $brand-color;
+                }
             }
         }
     }
@@ -295,23 +371,69 @@ body {
         .skills {
             &-item {
                 &:last-child {
-                    margin-bottom: 0;
+                    margin: 0;
                 }
                 font-size: $text-size;
                 margin: 0 0 32px;
-                width: 440px;
+                width: 30%;
                 position: relative;
                 &:after {
                     content: "";
                     width: 12px;
                     height: 12px;
-                    background-color: $brand-color;
-                    border-radius: 50%;
+                    // background-color: $brand-color;
+                    border-radius: 6px;
                     position: absolute;
-                    right: 0;
-                    bottom: 50%;
+                    right: -15%;
+                    bottom: 33%;
                     z-index: 5;
+                    // display: block;
+                    // transform: scaleX(1);
+                    // transform-origin: left 0%;
+                    // transition: width 250ms ease-in;
+                    transform: translateX(0%);
+                    background-image: linear-gradient(to right, $brand-color 0%, $brand-color 100%);
+                    // background-size: 0 100%;
+                    // background-repeat: no-repeat;
+                    // background-position: 0 0;
+                    // transition: background .5s, width 250ms ease-in;
+                    transition: 1.5s ease-in 1s;
                 }
+            }
+        }
+        &:hover {
+            .skills-item:after {
+                // height: 12px;
+                // width: 70%;
+                // border-radius: 6px;
+                // transform-origin: right 70%;
+                // transition: width 250ms ease-in;
+                transform: translateX(100%);
+                // width: 70%;
+                // background-size: 100% 100%;
+                // transition: background .5s, width 250ms ease-in, transform .5s;
+                transition: 1.1s ease-in-out;
+            }
+            .html-css:after {
+                width: 100%;
+            }
+            .layout:after {
+                width: 80%;
+            }
+            .bootstrap:after {
+                width: 35%;
+            }
+            .jquery:after {
+                width: 40%;
+            }
+            .preprocessors:after {
+                width: 75%;
+            }
+            .gulp:after {
+                width: 80%;
+            }
+            .git:after {
+                width: 70%;
             }
         }
     }
@@ -336,10 +458,20 @@ body {
         color: $light-text-color;
         .title {
             color: $primary-color;
+            margin: 0 0 $gap;
         }
         .projects {
             &-item {
-                color: $light-text-color;
+                margin: 0 0 $gap;
+                .project {
+                    margin: 0 0 32px;
+                }
+                .description {
+                    margin: 0 0 16px;
+                }
+                &:last-child {
+                    margin: 0;
+                }
             }
         }
         // display: none;
@@ -353,23 +485,30 @@ body {
         font-weight: 900;
         color: $dark-text-color;
     }
+    .text-light-color {
+        font-weight: 900;
+        color: $light-text-color;
+    }
     .experience-block {
-        .time {
-            margin: 0 0 10px;
-        }
-        .place {
-            margin: 0 0 8px;
-        }
-        .role {
-            margin: 0 0 46px;
-        }
-        .certificate {
-            position: relative;
-            .arrow {
-                position: absolute;
-                bottom: 7px;
-                right: -22px;
+        .title {
+            margin: 0 0 $gap;
+            .time {
+                margin: 0 0 10px;
             }
+            .place {
+                margin: 0 0 8px;
+            }
+            .role {
+                margin: 0 0 46px;
+            }
+        }
+    }
+    .link-arrow {
+        position: relative;
+        .arrow {
+            position: absolute;
+            bottom: 7px;
+            right: -22px;
         }
     }
     .footer {
@@ -396,10 +535,10 @@ body {
 }
 .active-burger {
     .sidenav {
-        display: flex;
         opacity: 1;
         transform: translateY(0%);
-        transition: 1.5s;
+        transition: 2s ease-out;
+        .nav {}
     }
     .menu {
         .btn-burger {
@@ -430,17 +569,19 @@ body {
         transform: translateX(100%);
         width: 50%;
         &-text {
-            transition: transform 1.5s;
+            transition: 1.5s;
         }
         &:before {
-            display: none;
+            // display: none;
             opacity: 0;
             transform: translateX(100%);
-            transition: opacity 4s, transform 2s;
+            transition: opacity 2s, transform 2s;
         }
         .info {
             display: block;
             opacity: 1;
+            // transform: translateY(100%);
+            transition: 2s ease-in-out;
             // margin: $gap;
             // overflow: hidden;
         }
