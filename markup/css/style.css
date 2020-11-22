@@ -122,7 +122,8 @@ body {
     .wrapper .header .theme {
       position: absolute;
       top: 43px;
-      right: 80px; }
+      right: 80px;
+      display: none; }
   .wrapper .menu {
     width: 56px;
     position: fixed;
@@ -161,6 +162,17 @@ body {
           bottom: 0;
           left: 0;
           transition: .7s ease-in-out; }
+    .wrapper .menu:hover .btn-burger-line:nth-child(1) {
+      transform: rotate(-15deg) scaleX(1.05);
+      top: -15px;
+      left: 5px; }
+    .wrapper .menu:hover .btn-burger-line:nth-child(2) {
+      transform: rotate(0deg) scaleX(1.3);
+      left: 20px; }
+    .wrapper .menu:hover .btn-burger-line:nth-child(3) {
+      transform: rotate(15deg) scaleX(1.05);
+      bottom: -15px;
+      left: 5px; }
   .wrapper .sidenav {
     display: flex;
     opacity: 0;
@@ -173,8 +185,7 @@ body {
     background: #eefbff;
     width: calc(50% - 80px);
     height: calc(100vh - 160px);
-    transform: translateX(-100%);
-    transition: 1s ease-out; }
+    transform: translateX(-100%); }
     .wrapper .sidenav .nav {
       padding: 0 80px; }
       .wrapper .sidenav .nav-item {
@@ -227,7 +238,9 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    opacity: 1;
+    transition: 2s ease-in-out; }
     .wrapper .hero:before {
       content: "";
       width: 50%;
@@ -237,7 +250,7 @@ body {
       right: 0;
       top: 0;
       z-index: 0;
-      transition: opacity 4s, transform 2s; }
+      transition: 2s ease-in-out; }
     .wrapper .hero-text {
       position: relative;
       z-index: 9; }
@@ -426,7 +439,7 @@ body {
 .active-burger .sidenav {
   opacity: 1;
   transform: translateY(0%);
-  transition: 2s ease-out; }
+  transition: 2s ease-in-out; }
 
 .active-burger .menu .btn-burger {
   position: relative;
@@ -447,17 +460,15 @@ body {
 
 .active-burger .hero {
   transform: translateX(100%);
-  width: 50%; }
+  width: 50%;
+  transition: 2s ease-in-out; }
   .active-burger .hero-text {
-    transition: 1.5s; }
+    transition: 2s ease-in-out; }
+    .active-burger .hero-text .info {
+      display: block;
+      opacity: 1; }
+    .active-burger .hero-text .welcome-text {
+      display: none; }
   .active-burger .hero:before {
     opacity: 0;
-    transform: translateX(100%);
-    transition: opacity 2s, transform 2s; }
-  .active-burger .hero .info {
-    display: block;
-    opacity: 1;
-    transition: 2s ease-in-out; }
-  .active-burger .hero .welcome-text {
-    opacity: 0;
-    display: none; }
+    transform: translateX(100%); }
